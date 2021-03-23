@@ -1,0 +1,98 @@
+﻿@model PoulSite.Models.Orders
+
+@{
+    ViewData["Title"] = "Check Out";
+}
+
+<style>
+    #button5 {
+        background-color: #453835;
+        color: #ebe2e1;
+        font-family: "Playfair Display";
+        font-size: 20px;
+        padding: 4px 30px 4px 30px;
+        margin-left: 10px;
+    }
+
+    #button6 {
+        background-color: #ebe2e1;
+        color: #453835;
+        font-family: "Playfair Display";
+        font-size: 20px;
+        padding: 4px 41px 4px 41px;
+    }
+</style>
+
+<h1>Check Out</h1>
+<p>Input details to proceed for check out.</p>
+<hr />
+<form asp-action="Create">
+    <div class="row">
+        <div class="col-4">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="OrderNo" class="control-label"></label>
+                <input asp-for="OrderNo" class="form-control" />
+                <span asp-validation-for="OrderNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactNo" class="control-label"></label>
+                <input asp-for="ContactNo" class="form-control" />
+                <span asp-validation-for="ContactNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <textarea asp-for="Address" class="form-control"></textarea>
+                <span asp-validation-for="Address" class="text-danger"></span>
+                <br />
+                <input type="checkbox" />
+                <label class="form-check-label">Set my default address</label>
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="OrderLists" class="control-label"></label>
+                <textarea asp-for="OrderLists" class="form-control"></textarea>
+                <span asp-validation-for="OrderLists" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalPrice" class="control-label"></label>
+                <input asp-for="TotalPrice" class="form-control" />
+                <span asp-validation-for="TotalPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateTimeOrdered" class="control-label"></label>
+                <input asp-for="DateTimeOrdered" class="form-control" />
+                <span asp-validation-for="DateTimeOrdered" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="Notes" class="control-label"></label>
+                <textarea asp-for="Notes" class="form-control"></textarea>
+                <span asp-validation-for="Notes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MOP" class="control-label"></label>
+                <select asp-for="MOP" class="form-control" asp-items="Html.GetEnumSelectList<MOPType>()"></select>
+                <span asp-validation-for="MOP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cancel" class="btn btn-sm" id="button6" />
+                <input type="submit" value="Check Out" class="btn btn-sm" id="button5" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,270 @@
+﻿
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+
+nav {
+    background-color: #d5c3a9;
+    color: #ebe2e1;
+    font-family: "Playfair Display";
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #453835;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #ebe2e1;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 18px;
+  color: #453835;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+    color: #453835;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #d5c3a9;
+}
+
+#HomepageBody {
+    /*background-image: url("HomeBG.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    max-height: 100%;
+    max-width: 100%;*/
+    background-color: #d5c3a9;
+    color: #453835;
+}
+
+h1 {
+    font-family: "Playfair Display";
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+}
+
+h6 {
+    font-family: "Playfair Display";
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 15.4px;
+}
+
+p {
+    font-family: "Playfair Display";
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+blockquote {
+    font-family: "Playfair Display";
+    font-size: 21px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+pre {
+    font-family: "Playfair Display";
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 18.5714px;
+}
+
+#button1 {
+    background-color: #453835;
+    color: #ebe2e1;
+    font-family: "Playfair Display";
+    font-size: 25px;
+    padding: 4px 50px 4px 50px;
+    margin-right: 10px;
+}
+
+#button2 {
+    background-color: #ebe2e1;
+    color: #453835;
+    font-family: "Playfair Display";
+    font-size: 25px;
+    padding: 4px 40px 4px 40px;
+    margin-left: 10px;
+}
+
+#button3 {
+    background-color: #453835;
+    color: #ebe2e1;
+    font-family: "Playfair Display";
+    font-size: 20px;
+    padding: 4px 140px 4px 140px;
+}
+
+#button4 {
+    background-color: #453835;
+    color: #ebe2e1;
+    font-family: "Playfair Display";
+    font-size: 20px;
+    padding: 4px 130px 4px 130px;
+}
+
+#link {
+    color: #453835;
+    font-family: "Playfair Display";
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/* Homepage CSS */
+
+.contacts {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #d5c3a9;
+}
+
+.contacts {
+    background: #453835;
+    padding-top: 70px;
+}
+
+ul.sociel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+    ul.sociel li {
+        display: inline-block;
+    }
+
+        ul.sociel li a {
+            color: #000;
+            width: 50px;
+            height: 50px;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 100%;
+            font-size: 18px;
+        }
+
+            ul.sociel li a:hover {
+                color: #fff;
+                width: 50px;
+                height: 50px;
+                background: #181201;
+                float: left;
+                text-align: center;
+                line-height: 50px;
+                border-radius: 100%;
+                font-size: 18px;
+            }
+
+.contact {
+    margin-top: 50px;
+}
+
+    .contact h3 {
+        color: #fff;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 30px;
+        padding-bottom: 30px;
+        text-transform: uppercase;
+    }
+
+    .contact span {
+        color: #fff;
+        font-size: 17px;
+        line-height: 27px;
+    }
+
+ul.lik li a {
+    color: #fff;
+    font-size: 17px;
+    line-height: 27px;
+}
+
+    ul.lik li a:hover {
+        color: #ffc221;
+    }
+
+.carousel-inner img {
+    width: 100%;
+    height: 50%;
+}
