@@ -12,7 +12,7 @@ namespace PoulSite.Models
         [Key]
         public int CustNo { get; set; } 
 
-        [Required(ErrorMessage = "Required.")]
+        //vb[Required(ErrorMessage = "Required.")]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
