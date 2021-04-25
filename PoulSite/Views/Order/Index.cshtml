@@ -1,4 +1,4 @@
-﻿@model IEnumerable<PoulSite.Models.Orders>
+@model IEnumerable<PoulSite.Models.ContactForm>
 
 @{
     ViewData["Title"] = "Index";
@@ -9,35 +9,47 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table id="records" class="table">
+<table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.OrderLists)
+                @Html.DisplayNameFor(model => model.CustNo)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.FirstName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ContactNo)
+                @Html.DisplayNameFor(model => model.LastName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Address)
+                @Html.DisplayNameFor(model => model.MobileNumber)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DateTimeOrdered)
+                @Html.DisplayNameFor(model => model.EmailAddress)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DateAdded)
+                @Html.DisplayNameFor(model => model.DateofBirth)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Notes)
+                @Html.DisplayNameFor(model => model.Gender)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TotalPrice)
+                @Html.DisplayNameFor(model => model.Region)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MOP)
+                @Html.DisplayNameFor(model => model.Province)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostalCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Barangay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompleteAddress)
             </th>
             <th></th>
         </tr>
@@ -46,51 +58,50 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.OrderLists)
+                @Html.DisplayFor(modelItem => item.CustNo)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+                @Html.DisplayFor(modelItem => item.FirstName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ContactNo)
+                @Html.DisplayFor(modelItem => item.LastName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Address)
+                @Html.DisplayFor(modelItem => item.MobileNumber)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DateTimeOrdered)
+                @Html.DisplayFor(modelItem => item.EmailAddress)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DateAdded)
+                @Html.DisplayFor(modelItem => item.DateofBirth)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Notes)
+                @Html.DisplayFor(modelItem => item.Gender)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TotalPrice)
+                @Html.DisplayFor(modelItem => item.Region)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.MOP)
+                @Html.DisplayFor(modelItem => item.Province)
             </td>
             <td>
-                <a class="btn btn-sm btn-info" asp-action="Edit" asp-route-id="@item.OrderNo">
-                    <i class="fa fa-edit"></i>
-                </a>
-                <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.OrderNo" onclick='return confirm("Are you sure?");'>
-                    <i class="fa fa-remove"></i>
-                </a>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostalCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Barangay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompleteAddress)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>
 }
     </tbody>
 </table>
-
-@section Scripts{
-    <script src="~/lib/datatables/js/jquery.dataTables.js"></script>
-    <script src="~/lib/datatables/js/dataTables.bootstrap4.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#records').DataTable();
-        });
-    </script>
-}
