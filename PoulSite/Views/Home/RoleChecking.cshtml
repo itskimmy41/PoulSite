@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "_Layout2";
+    ViewData["Title"] = "RoleChecking";
+}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width" />
+<title></title>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<script src="~/Scripts/jquery-3.0.0.min.js"></script>
+<script src="~/Scripts/popper-utils.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+<style>
+    .btn1 {
+        background-color: #453835;
+        color: white;
+        border: none;
+        padding: 162px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 40px;
+        margin: 2px 2px;
+        cursor: pointer;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .btn2 {
+        background-color: #ebe2e1;
+        color: #453835;
+        border: none;
+        padding: 136.5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 38px;
+        margin: 2px 2px;
+        cursor: pointer;
+        font-family: 'Playfair Display', serif;
+    }
+
+    button:hover {
+        background-color: #BDAD95;
+    }
+</style>
+
+<div class="container text-center">
+    <br />
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <form action="https://localhost:44367/Contact/CreateContact">
+                <button class="btn1" role="button" id="isCust"><i>I am a customer</i></button>
+            </form>
+        </div>
+        <div class="col-md-6 text-center">
+            <form action="https://localhost:44367/Order/Index">
+                <button class="btn2" role="button" id="isDP"><i>I am a delivery person</i></button>
+            </form>
+        </div>
+    </div>
+</div>
